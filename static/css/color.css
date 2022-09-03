@@ -1,0 +1,261 @@
+/*
+
+Author		:	BestPixels
+Template	:	EveMat | Responsive HTML Event Template
+Version		:	1.0
+
+*/
+
+.button{
+	color:#7c4dff;
+}
+.button:hover{
+	background:#7c4dff;
+}
+.button.alt{
+	background:#7c4dff;
+}
+.button.alt:hover{
+	background:#663CDC;
+}
+.line-button:hover,
+.line-button:focus{
+	color:#7c4dff;
+}
+.sub-heading h4:after{
+	background:#7c4dff;
+}
+.sub-heading h4{
+	color:#7c4dff;
+}
+.overlay{
+	background:rgba(0,0,0,.4);
+}
+.overlay-half{
+	background:rgba(0,0,0,.2);
+}
+p span{
+	background:#7c4dff;
+}
+.top-info-bar{
+	background:#7c4dff;
+}
+.navbar-default .navbar-nav > li > a:after{
+	background:#7c4dff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.current > a,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus{
+	background:#7c4dff;
+}
+.dropdown-menu {
+	border-top: 1px solid #7c4dff;
+}
+.dropdown-menu li:hover {
+	border-bottom: 1px solid #7c4dff;
+}
+.dropdown-menu > li.current > a {
+	background:#7c4dff;
+}
+.page-heading .breadcrumb li a:hover{
+	color:#7c4dff;
+}
+.video-play:hover{
+	color:#7c4dff;
+}
+.speaker-over{
+	background:rgba(102,60,220,.8);
+}
+.about-speaker a{
+	color:#7c4dff;
+}
+.about-speaker a:after{
+	background:#7c4dff;
+}
+.sperker-cover-over{
+	background:rgba(124,77,255,.80);
+}
+.speakers-thought a{
+	color:#7c4dff;
+}
+.speakers-thought a:after{
+	background:#7c4dff;
+}
+.speaker-name h5:after{
+	color:#7c4dff;
+}
+.sdt-top ul li a:hover{
+	color:#7c4dff;
+}
+.schedules{
+	background:#7c4dff;
+}
+.schedule-title{
+	background:#7c4dff;
+	border-bottom:1px solid #663cdc;
+}
+.schedule-date .nav-tabs li{
+	border-bottom:1px solid #663cdc;
+}
+.schedule-date .nav-tabs li a{
+	background:#7c4dff;
+}
+.schedule-date .nav-tabs > li.active > a, 
+.schedule-date .nav-tabs > li.active > a:hover, 
+.schedule-date .nav-tabs > li.active > a:focus {
+	background:#663cdc;
+}
+.schedule-info h5 a:hover{
+	color:#7c4dff;
+}
+.package-title{
+	background:#7c4dff;
+}
+.package-badge{
+	background:#663cdc;
+}
+.package-price{
+	background:#663cdc;
+}
+.price{
+	background:#7c4dff;
+}
+.input-box .select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background-color: #7c4dff;
+}
+.sponsors-nav .nav-tabs  li.active a {
+	background:#7c4dff;
+}
+.input-box-underline .input{
+	border-bottom:2px solid #7c4dff;
+}
+.input-box-underline .input:focus{
+	background:#7c4dff;
+}
+.single-package-select label{
+	border-bottom:2px solid #7c4dff;
+}
+.single-package-select input:checked + label{
+	background:#7c4dff;
+}
+.sb-over{
+	background:#7c4dff;
+}
+
+.sb-over-innr a{
+	color:#7c4dff;
+}
+.sb-over-innr a:after{
+	background:#7c4dff;
+}
+.sb-social-share{
+	background:#7c4dff;
+}
+.social-trigger{
+	border-bottom:1px solid #663cdc;
+}
+.post-content blockquote{
+	background:#7c4dff;
+}
+.post-author ul li a:hover{
+	color:#7c4dff;
+}
+.contact-info h4:after{
+	background:#7c4dff;
+}
+.contact-info h4{
+	color:#7c4dff;
+}
+.single-contact-info span{
+	color:#7c4dff;
+}
+.contact-form h4:after{
+	background:#7c4dff;
+}
+.contact-form h4{
+	color:#7c4dff;
+}
+.sacc-over span.blue{
+	border:5px solid #7c4dff;
+}
+.gallery-over{
+	background:rgba(124,77,255,.5);
+}
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr--audio .plyr__controls button:hover,
+.plyr__play-large,
+.plyr--video .plyr__controls button.tab-focus:focus,
+.plyr--video .plyr__controls button:hover {
+	background: #7c4dff;
+}
+.plyr__progress--played, .plyr__volume--display {
+	color: #7c4dff;
+}
+.single-widget h5{
+	color:#7c4dff;
+}
+.tag-list li a{
+	background:#7c4dff;
+}
+.error-page .breadcrumb li a:hover{
+	color:#7c4dff;
+}
+.error-page-content h5{
+	color:#7c4dff;
+}
+.error-search-form input[type="text"]{
+	border-bottom:2px solid #7c4dff;
+}
+.error-search-form input[type="submit"]{
+	background:#7c4dff;
+}
+.footer-area{
+	background:#141414;
+}
+.footer-social li a:hover{
+	color:#663cdc;
+}
+.subscription-form input[type="text"]{
+	border:3px solid #000;
+}
+.subscription-form input[type="submit"]{
+	background:#000;
+}
+
+.more-image,
+.more-image:hover{
+	color:#fff;
+}
+.footer-bar-area{
+	background:#000;
+}
+
+/*Coustom Media Query CSS*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.navbar-nav .open .dropdown-menu {
+		border: 1px solid #7c4dff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li.current > a ,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		background: #7c4dff;
+		color: #fff;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.navbar-nav .open .dropdown-menu {
+		border: 1px solid #7c4dff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li.current > a ,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		background: #7c4dff;
+		color: #fff;
+	}
+}

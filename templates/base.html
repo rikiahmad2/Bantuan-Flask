@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Responsive HTML Event Template" />
+    <meta name="author" content="bestpixels" />
+
+    <!-- Fav Icon  -->
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/ico/favicon.png') }}"
+    />
+    <link
+      href="{{ url_for('static', filename='images/ico/favicon.ico') }}"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="{{ url_for('static', filename='images/ico/favicon.ico') }}"
+      rel="icon"
+      type="image/x-icon"
+    />
+
+    <!-- Site Title  -->
+    <title>{{title}}</title>
+
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    {% include "navigation.html" %} {% block body %} {% endblock %} {% extends
+    'footer.html' %}
+  </body>
+</html>

@@ -1,0 +1,639 @@
+{% extends 'base.html' %} 
+
+{% block head %}
+<!-- Bootstrap core CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='assets/css/bootstrap.css') }}"
+/>
+
+<!-- Magnific Popup CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/Magnific-Popup/dist/magnific-popup.css') }}"
+/>
+
+<!-- Font Awesome CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/Font-Awesome/css/font-awesome.min.css') }}"
+/>
+
+<!-- Select2 CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/select2/css/select2.min.css') }}"
+/>
+
+<!-- plyr CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/plyr/dist/plyr.css') }}"
+/>
+
+<!-- Custom styles for this template -->
+<link
+  href="{{ url_for('static', filename='css/font.css') }}"
+  rel="stylesheet"
+/>
+<link
+  href="{{ url_for('static', filename='css/style.css') }}"
+  rel="stylesheet"
+/>
+
+<link
+  href="{{ url_for('static', filename='css/color.css') }}"
+  rel="stylesheet"
+/>
+
+<!-- Custom CSS -->
+<link
+  href="{{ url_for('static', filename='css/custom.css') }}"
+  rel="stylesheet"
+/>
+{% endblock %} 
+
+{% block body %}
+<div class="page-heading">
+  <div class="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">About</li>
+          </ul>
+          <h2>About Us</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.header-area -->
+
+<div class="about-area gray-bg" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb30">
+        <div class="video-intro primary-shadow">
+          <img
+            src="{{ url_for('static', filename='images/about/video-intro.jpg') }}"
+            alt="video-intro"
+          />
+          <a
+            class="video-play embedded-popup"
+            href="https://www.youtube.com/watch?v=SZEflIVnhH8"
+          >
+            <i class="fa fa-play"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-text">
+          <h4>About The Event</h4>
+          <p>
+            This event is exclusively for them who want to learn & know about
+            material design principales introduced by Google. Also if you are a
+            designer, then You should know or learn about new design trend like
+            Material Design. Beacuse this is the future of design. In this
+            conferance we will talk about material design like & What you need
+            not to do etc.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="single-about primary-shadow white-bg">
+              <h5>Who we are ?</h5>
+              <p>
+                We are the best designer comunity arond the world. We love to
+                share our knowledge & expriences
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="single-about primary-shadow white-bg">
+              <h5>Our Misson</h5>
+              <p>
+                We are the best designer comunity arond the world. We love to
+                share our knowledge & expriences
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.about-area -->
+
+<div class="testimonials-area image-bg">
+  <div class="overlay">
+    <div class="container">
+      <div class="sub-heading">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Testimonals</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="client-pagination" id="testimonial-pager">
+            <a data-slide-index="0" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/1.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="1" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/2.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="2" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/3.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="3" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/4.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="4" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/5.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="5" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/6.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="6" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/7.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="7" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/8.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="8" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/9.jpg') }}"
+                alt="client"
+              />
+            </a>
+            <a data-slide-index="9" href="">
+              <img
+                src="{{ url_for('static', filename='images/testimonial/thumbs/1.jpg') }}"
+                alt="client"
+              />
+            </a>
+          </div>
+          <!-- /.client-pagination -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-8">
+          <div id="testimonials">
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/1.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/2.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/3.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/4.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/5.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/6.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/7.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/8.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/9.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+            <div class="single-testimonial">
+              <div class="row">
+                <div class="col-sm-7 mb30">
+                  <blockquote>
+                    This is the best event i had ever joined. Most exiting this
+                    is speakers are so exprienced & helpfull. Also the
+                    decoretion was also very good. In one word 'Just Awesome'
+                  </blockquote>
+                  <ul class="customer-rating">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                  </ul>
+                  <h4>DEazel Kameru</h4>
+                </div>
+                <div class="col-sm-5">
+                  <div class="client-image primary-shadow">
+                    <img
+                      src="{{ url_for('static', filename='images/testimonial/10.jpg') }}"
+                      alt="client"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.single-testimonial -->
+          </div>
+          <!-- /#testimonials -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.overlay -->
+</div>
+<!-- /.testimonials-area -->
+
+<div class="footer-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="single-footer-widget">
+          <a href="index.html" class="footer-logo">
+            <img
+              src="{{ url_for('static', filename='images/footer-logo.png') }}"
+              alt="logo"
+            />
+          </a>
+          <p>
+            Evemat is a Responsive HTML Event Template based on material design
+            language invented by google .
+          </p>
+          <ul class="footer-social">
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-tumblr"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.col -->
+      <div class="col-md-4 col-sm-6">
+        <div class="single-footer-widget">
+          <h4>SUBSCribe Me !</h4>
+          <form action="subscribe.php" class="subscription-form">
+            <input type="text" placeholder="Your Email" />
+            <input type="submit" value="go" />
+          </form>
+          <p>Your Information is safe to us .</p>
+        </div>
+      </div>
+      <!-- /.col -->
+      <div class="col-md-4 col-sm-12">
+        <div class="single-footer-widget">
+          <h4>MINI Gallery</h4>
+          <ul class="gallery-list">
+            <li>
+              <img
+                src="{{ url_for('static', filename='images/gallery/thumb/1.jpg') }}"
+                alt="gallery"
+              />
+            </li>
+            <li>
+              <img
+                src="{{ url_for('static', filename='images/gallery/thumb/2.jpg') }}"
+                alt="gallery"
+              />
+            </li>
+            <li>
+              <img
+                src="{{ url_for('static', filename='images/gallery/thumb/3.jpg') }}"
+                alt="gallery"
+              />
+            </li>
+            <li>
+              <img
+                src="{{ url_for('static', filename='images/gallery/thumb/4.jpg') }}"
+                alt="gallery"
+              />
+            </li>
+            <li>
+              <img
+                src="{{ url_for('static', filename='images/gallery/thumb/2.jpg') }}"
+                alt="gallery"
+              />
+            </li>
+            <li>
+              <img
+                src="{{ url_for('static', filename='images/gallery/thumb/1.jpg') }}"
+                alt="gallery"
+              />
+            </li>
+          </ul>
+          <a href="gallery.html" class="more-image">More Images</a>
+        </div>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.footer-area -->
+
+<!-- Bootstrap core JavaScript
+		================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<!-- jQuery Magnific-Popup
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/Magnific-Popup/dist/jquery.magnific-popup.min.js') }}"></script>
+
+<!-- Select2
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/select2/js/select2.min.js') }}"></script>
+
+<!-- jQuery BxSlider
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/BxSlider/jquery.bxslider.min.js') }}"></script>
+
+<!-- jQuery plyr
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/plyr/dist/plyr.js') }}"></script>
+
+<!-- Google Map
+		================================================== -->
+<script
+  type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js"
+></script>
+
+<!-- jQuery Custom
+		================================================== -->
+<script
+  src="{{ url_for('static', filename='js/custom.js') }}"
+  type="text/javascript"
+></script>
+{% endblock %}

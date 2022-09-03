@@ -1,0 +1,195 @@
+{% extends 'base.html' %} 
+
+{% block head %}
+<!-- Bootstrap core CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='assets/css/bootstrap.css') }}"
+/>
+
+<!-- Magnific Popup CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/Magnific-Popup/dist/magnific-popup.css') }}"
+/>
+
+<!-- Font Awesome CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/Font-Awesome/css/font-awesome.min.css') }}"
+/>
+
+<!-- Select2 CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/select2/css/select2.min.css') }}"
+/>
+
+<!-- plyr CSS -->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='lib/plyr/dist/plyr.css') }}"
+/>
+
+<!-- Custom styles for this template -->
+<link
+  href="{{ url_for('static', filename='css/font.css') }}"
+  rel="stylesheet"
+/>
+<link
+  href="{{ url_for('static', filename='css/style.css') }}"
+  rel="stylesheet"
+/>
+
+<link
+  href="{{ url_for('static', filename='css/color.css') }}"
+  rel="stylesheet"
+/>
+
+<!-- Custom CSS -->
+<link
+  href="{{ url_for('static', filename='css/custom.css') }}"
+  rel="stylesheet"
+/>
+{% endblock %} 
+
+{% block body %}
+<div class="about-area gray-bg" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb30">
+        <div>
+          <img
+            src="{{ url_for('static', filename='images/') }}{{icon}}" height="450" width="450"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-text">
+          <h4>{{data}}</h4>
+          {% if data == 'Tidak Berhak Mendapat Bantuan' %}
+            <p>
+                Maaf, sistem kami menilai bahwa anda sebagai pihak yang mampu, dan tidak berhak mendapat
+                bantuan. Jangan patah semangat dan semoga anda segera bisa bangkit kembali.
+                Kami mendoakan yang terbaik bagi anda
+            </p>
+          {% elif data == 'Bantuan BLT' %}
+            <p>
+                Selamat, anda berhak untuk mendapatkan bantuan BLT, bantuan bisa anda claim di loket terdekat.
+                Pastikan anda telah mengisi semua persyaratan yang diperlukan dan semoga bantuan ini bisa membantu anda.
+                Kami mendo'akan yang terbaik bagi anda
+            </p>
+          {% elif data == 'Bantuan PKH' %}
+            <p>
+                Selamat, anda berhak untuk mendapatkan bantuan BLT, bantuan bisa anda claim di loket terdekat.
+                Pastikan anda telah mengisi semua persyaratan yang diperlukan dan semoga bantuan ini bisa membantu anda.
+                Kami mendo'akan yang terbaik bagi anda
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.about-area -->
+<div class="footer-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="single-footer-widget">
+          <a href="index.html" class="footer-logo">
+            <img
+              src="{{ url_for('static', filename='images/footer-logo.png') }}"
+              alt="logo"
+            />
+          </a>
+          <p>
+            Evemat is a Responsive HTML Event Template based on material design
+            language invented by google .
+          </p>
+          <ul class="footer-social">
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-tumblr"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.col -->
+      <div class="col-md-4 col-sm-6">
+        <div class="single-footer-widget">
+          <h4>SUBSCribe Me !</h4>
+          <form action="subscribe.php" class="subscription-form">
+            <input type="text" placeholder="Your Email" />
+            <input type="submit" value="go" />
+          </form>
+          <p>Your Information is safe to us .</p>
+        </div>
+      </div>
+      <!-- /.col -->
+      <div class="col-md-4 col-sm-12">
+        <div class="single-footer-widget">
+          <h4>MINI Gallery</h4>
+          <a href="gallery.html" class="more-image">More Images</a>
+        </div>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.footer-area -->
+
+<!-- Bootstrap core JavaScript
+		================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+<!-- jQuery Magnific-Popup
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/Magnific-Popup/dist/jquery.magnific-popup.min.js') }}"></script>
+
+<!-- Select2
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/select2/js/select2.min.js') }}"></script>
+
+<!-- jQuery BxSlider
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/BxSlider/jquery.bxslider.min.js') }}"></script>
+
+<!-- jQuery plyr
+		================================================== -->
+<script src="{{ url_for('static', filename='lib/plyr/dist/plyr.js') }}"></script>
+
+<!-- Google Map
+		================================================== -->
+<script
+  type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js"
+></script>
+
+<!-- jQuery Custom
+		================================================== -->
+<script
+  src="{{ url_for('static', filename='js/custom.js') }}"
+  type="text/javascript"
+></script>
+{% endblock %}
