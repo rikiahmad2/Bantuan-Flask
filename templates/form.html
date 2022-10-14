@@ -1,292 +1,278 @@
-{% extends 'base.html' %}
+  {% extends 'base.html' %}
 
-{% block head %}
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" />
+  {% block head %}
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.css') }}" />
 
-  <!-- Magnific Popup CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='lib/Magnific-Popup/dist/magnific-popup.css') }}" />
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/Magnific-Popup/dist/magnific-popup.css') }}" />
 
-  <!-- Font Awesome CSS --> 
-  <link rel="stylesheet" href="{{ url_for('static', filename='lib/Font-Awesome/css/font-awesome.min.css') }}" />
+    <!-- Font Awesome CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/Font-Awesome/css/font-awesome.min.css') }}" />
 
-  <!-- Select2 CSS --> 
-  <link rel="stylesheet" href="{{ url_for('static', filename='lib/select2/css/select2.min.css') }}" />
+    <!-- Select2 CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/select2/css/select2.min.css') }}" />
 
-  <!-- plyr CSS --> 
-  <link rel="stylesheet" href="{{ url_for('static', filename='lib/plyr/dist/plyr.css') }}" />
+    <!-- plyr CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/plyr/dist/plyr.css') }}" />
 
-  <!-- Custom styles for this template -->  
-  <link href="{{ url_for('static', filename='css/font.css') }}" rel="stylesheet" />
-  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
-  <link href="{{ url_for('static', filename='css/color.css') }}" rel="stylesheet" />
+    <!-- Custom styles for this template -->  
+    <link href="{{ url_for('static', filename='css/font.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/color.css') }}" rel="stylesheet" />
 
-  <!-- Custom CSS --> 
-  <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet" />
-{% endblock %}
+    <!-- Custom CSS --> 
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet" />
+  {% endblock %}
 
-{% block body %}
-  <div class="contact-area gray-bg">
+  {% block body %}
+    <div class="contact-area gray-bg">
 
-  <div class="container">
-    <!-- /.row -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="contact-form primary-shadow mb30 white-bg">
-          <h4>Form</h4>
-          <form action={{url_for('form_post')}} method="post">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="input-box-underline">
-                  <input
-                    class="input"
-                    type="number"
-                    name="luas_lantai"
-                    id="luas_lantai"
-                    placeholder="Luas Lantai">
+    <div class="container">
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="contact-form primary-shadow mb30 white-bg">
+            <h4>Form</h4>
+            <form action={{url_for('form_post')}} method="post">
+              <div class="row">
+                <div class="col-sm-6">
+                  <p class="m-0 p-0">Berapa Luas Lantai ?</p>
+                  <div class="input-box-underline">
+                    <input
+                      class="input"
+                      type="number"
+                      name="luas_lantai"
+                      id="luas_lantai"
+                      placeholder="Dalam m2">
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="input-box-underline">
-                  <input
-                    class="input"
-                    type="number"
-                    name="lantai_tanah"
-                    id="lantai_tanah"
-                    placeholder="Lantai Tanah"
-                  />
+                <div class="col-sm-6">
+                  <p class="m-0 p-0">Lantai Terbuat Dari</p>
+                  <div class="input-box-underline">
+                    <input
+                      class="input"
+                      type="text"
+                      name="lantai_tanah"
+                      id="lantai_tanah"
+                      placeholder="Lantai Tanah"
+                    />
+                  </div>
                 </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Dinding Bambu :</p>
-          <input type="radio" id="yes" name="dinding_bambu" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="dinding_bambu" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Tidak Punya MCK :</p>
-          <input type="radio" id="yes" name="tidak_punya_mck" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="tidak_punya_mck" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Tidak Punya Listrik :</p>
-          <input type="radio" id="yes" name="tidak_punya_listrik" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="tidak_punya_listrik" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Air minum sumur :</p>
-          <input type="radio" id="yes" name="air_minum_sumur" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="air_minum_sumur" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Kayu bakar :</p>
-          <input type="radio" id="yes" name="kayu_bakar" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="kayu_bakar" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Daging satu seminggu :</p>
-          <input type="radio" id="yes" name="daging_satu_seminggu" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="daging_satu_seminggu" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Satu baju setahun :</p>
-          <input type="radio" id="yes" name="satu_baju_setahun" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="satu_baju_setahun" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Makan satu dua sehari :</p>
-          <input type="radio" id="yes" name="makan_satu_dua_sehari" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="makan_satu_dua_sehari" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Tidak sanggup berobat :</p>
-          <input type="radio" id="yes" name="tidak_sanggup_berobat" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="tidak_sanggup_berobat" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Penghasilan dibawah 600 :</p>
-          <input type="radio" id="yes" name="penghasilan_dibawah_600" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="penghasilan_dibawah_600" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">kk tidak sekolah :</p>
-          <input type="radio" id="yes" name="kk_tidak_sekolah" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="kk_tidak_sekolah" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">tidak punya tabungan :</p>
-          <input type="radio" id="yes" name="tidak_punya_tabungan" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="tidak_punya_tabungan" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">lansia :</p>
-          <input type="radio" id="yes" name="lansia" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="lansia" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">disabilitas :</p>
-          <input type="radio" id="yes" name="disabilitas" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="disabilitas" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>	
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Usia dini :</p>
-          <input type="radio" id="yes" name="usia_dini" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="usia_dini" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-      <div class="col-sm-4 mb-2">
-                <div class="input-box-underline">
-        <p class="m-0 p-0">Ibu hamil :</p>
-          <input type="radio" id="yes" name="ibu_hamil" value="1">
-          <label for="yes" class="mr-1">Ya</label>
-          <input type="radio" id="no" name="ibu_hamil" value="0">
-          <label for="no">Tidak</label>
-                </div>
-              </div>
-              
+        <div class="col-sm-6 mb-2">
+            <div class="input-box-underline">
+              <p class="m-0 p-0">Dinding :</p>
+                <input type="radio" id="yes" name="dinding_bambu" value="1">
+                <label for="yes" class="mr-1">Bambu</label>
+                <input type="radio" id="no" name="dinding_bambu" value="0">
+                <label for="no" class="mr-1">Rumbia</label>
+                <input type="radio" id="no" name="dinding_bambu" value="0">
+                <label for="no" class="mr-1">Tembok Tanpa Plester</label>
+                <input type="radio" id="no" name="dinding_bambu" value="0">
+                <label for="no">Kayu</label>
             </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="input-box-underline">
-          <input
-          class="input"
-          type="number"
-          name="anak_sd"
-          id="anak_sd"
-          placeholder="Anak SD"
-          />
         </div>
+        <div class="col-sm-6 mb-2">
+            <div class="input-box-underline">
+              <p class="m-0 p-0">Buang Air Besar Tanpa Fasilitas</p>
+                <input type="radio" id="yes" name="tidak_punya_mck" value="1">
+                <label for="yes" class="mr-1">Fasilitas</label>
+                <input type="radio" id="no" name="tidak_punya_mck" value="0">
+                <label for="no">Fasilitas Bersama</label>
+            </div>
         </div>
-        <div class="col-sm-4">
-        <div class="input-box-underline">
-          <input
-          class="input"
-          type="number"
-          name="anak_smp"
-          id="anak_smp"
-          placeholder="Anak SMP"
-          />
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Tidak Punya Listrik :</p>
+              <input type="radio" id="yes" name="tidak_punya_listrik" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="tidak_punya_listrik" value="0">
+              <label for="no">Tidak</label>
+          </div>
         </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Air minum sumur :</p>
+              <input type="radio" id="yes" name="air_minum_sumur" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="air_minum_sumur" value="0">
+              <label for="no">Tidak</label>
+            </div>
         </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Kayu bakar :</p>
+              <input type="radio" id="yes" name="kayu_bakar" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="kayu_bakar" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Daging satu seminggu :</p>
+              <input type="radio" id="yes" name="daging_satu_seminggu" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="daging_satu_seminggu" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Satu baju setahun :</p>
+              <input type="radio" id="yes" name="satu_baju_setahun" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="satu_baju_setahun" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Makan satu dua sehari :</p>
+              <input type="radio" id="yes" name="makan_satu_dua_sehari" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="makan_satu_dua_sehari" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Tidak sanggup berobat :</p>
+              <input type="radio" id="yes" name="tidak_sanggup_berobat" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="tidak_sanggup_berobat" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Penghasilan dibawah 600 :</p>
+              <input type="radio" id="yes" name="penghasilan_dibawah_600" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="penghasilan_dibawah_600" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">kk tidak sekolah :</p>
+              <input type="radio" id="yes" name="kk_tidak_sekolah" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="kk_tidak_sekolah" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">tidak punya tabungan :</p>
+              <input type="radio" id="yes" name="tidak_punya_tabungan" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="tidak_punya_tabungan" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">lansia :</p>
+              <input type="radio" id="yes" name="lansia" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="lansia" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">disabilitas :</p>
+              <input type="radio" id="yes" name="disabilitas" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="disabilitas" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>	
+        <div class="col-sm-6 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Usia dini :</p>
+              <input type="radio" id="yes" name="usia_dini" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="usia_dini" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2">
+          <div class="input-box-underline">
+            <p class="m-0 p-0">Ibu hamil :</p>
+              <input type="radio" id="yes" name="ibu_hamil" value="1">
+              <label for="yes" class="mr-1">Ya</label>
+              <input type="radio" id="no" name="ibu_hamil" value="0">
+              <label for="no">Tidak</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-sm-4">
           <div class="input-box-underline">
-            <input
-            class="input"
-            type="number"
-            name="anak_sma"
-            id="anak_sma"
-            placeholder="Anak SMP"
-            />
+            <input class="input" type="number" name="anak_sd" id="anak_sd" placeholder="Anak SD"/>
           </div>
           </div>
-    </div>
-            
-            <!-- /.row -->
-            <div class="row">
-              <div class="col-sm-12">
-                <input type="submit" value="submit" class="button alt" />
-              </div>
+          <div class="col-sm-4">
+          <div class="input-box-underline">
+            <input class="input" type="number" name="anak_smp" id="anak_smp" placeholder="Anak SMP"/>
+          </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="input-box-underline">
+              <input class="input" type="number" name="anak_sma" id="anak_sma" placeholder="Anak SMP"/>
             </div>
-            <!-- /.row -->
-          </form>
-        </div>
-        <!-- /.contact-info -->
+          </div>
       </div>
-      <!-- /.col -->
+              <!-- /.row -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <input type="submit" value="submit" class="button alt" />
+                </div>
+              </div>
+              <!-- /.row -->
+            </form>
+          </div>
+          <!-- /.contact-info -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
     </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-  </div>
-  <!-- /.contact-area -->
+    <!-- /.container -->
+    </div>
+    <!-- /.contact-area -->
 
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
 
 
-  <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
 
-  <!-- jQuery Magnific-Popup
-  ================================================== -->
-  <script src="{{ url_for('static', filename='lib/Magnific-Popup/dist/jquery.magnific-popup.min.js') }}"></script>
+    <!-- jQuery Magnific-Popup
+    ================================================== -->
+    <script src="{{ url_for('static', filename='lib/Magnific-Popup/dist/jquery.magnific-popup.min.js') }}"></script>
 
-  <!-- Select2
-  ================================================== -->
-  <script src="{{ url_for('static', filename='lib/select2/js/select2.min.js') }}"></script>
+    <!-- Select2
+    ================================================== -->
+    <script src="{{ url_for('static', filename='lib/select2/js/select2.min.js') }}"></script>
 
-  <!-- jQuery BxSlider
-  ================================================== -->
-  <script src="{{ url_for('static', filename='lib/BxSlider/jquery.bxslider.min.js') }}"></script>
+    <!-- jQuery BxSlider
+    ================================================== -->
+    <script src="{{ url_for('static', filename='lib/BxSlider/jquery.bxslider.min.js') }}"></script>
 
-  <!-- jQuery plyr
-  ================================================== -->
-  <script src="{{ url_for('static', filename='lib/plyr/dist/plyr.js') }}"></script>
+    <!-- jQuery plyr
+    ================================================== -->
+    <script src="{{ url_for('static', filename='lib/plyr/dist/plyr.js') }}"></script>
 
-  <!-- Google Map
-  ================================================== -->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- Google Map
+    ================================================== -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
-  <!-- jQuery Custom
-  ================================================== -->
-  <script src="{{ url_for('static', filename='js/custom.js') }}" type="text/javascript"></script>
-{% endblock %}
+    <!-- jQuery Custom
+    ================================================== -->
+    <script src="{{ url_for('static', filename='js/custom.js') }}" type="text/javascript"></script>
+  {% endblock %}
