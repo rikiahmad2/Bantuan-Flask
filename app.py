@@ -28,8 +28,14 @@ def form_post():
     with open('model_pickle', 'rb') as r:
         modelload = pickle.load(r)
     form = request.form
+    luas_lantai = form['luas_lantai']
+    luas_lantai = int(luas_lantai)
+    if(luas_lantai >= 60):
+        luas_lantai = 0
+    else :
+        luas_lantai = 1       
     data = [
-        form['luas_lantai'],
+        luas_lantai,
         form['lantai_tanah'],
         form['dinding_bambu'],
         form['tidak_punya_mck'],
