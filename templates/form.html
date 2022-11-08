@@ -44,13 +44,13 @@
                       type="number"
                       name="luas_lantai"
                       id="luas_lantai"
-                      placeholder="Dalam m2">
+                      placeholder="Dalam m2" required>
                   </div>
                 </div>
                 <div class="col-sm-6 mb-2">
                   <p class="m-0 p-0">Lantai Terbuat Dari tanah/ bambu/ kayu</p>
                   <div class="input-box-underline">
-                    <input type="radio" id="yes" name="lantai_tanah" value="1">
+                    <input type="radio" id="yes" name="lantai_tanah" value="1" required>
                     <label for="yes" class="mr-1">Ya</label>
                     <input type="radio" id="no" name="lantai_tanah" value="0">
                     <label for="no">Tidak</label>
@@ -59,7 +59,7 @@
         <div class="col-sm-6 mb-2">
             <div class="input-box-underline">
               <p class="m-0 p-0">Dinding terbuat dari bambu / rumbia / kayu / tembok tanpa plester</p>
-              <input type="radio" id="yes" name="dinding_bambu" value="1">
+              <input type="radio" id="yes" name="dinding_bambu" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="dinding_bambu" value="0">
               <label for="no">Tidak</label>
@@ -68,7 +68,7 @@
         <div class="col-sm-6 mb-2">
             <div class="input-box-underline">
               <p class="m-0 p-0">Buang air besar tanpa fasilitas / fasilitas bersama</p>
-              <input type="radio" id="yes" name="tidak_punya_mck" value="1">
+              <input type="radio" id="yes" name="tidak_punya_mck" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="tidak_punya_mck" value="0">
               <label for="no">Tidak</label>
@@ -77,7 +77,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Penerangan tanpa listrik :</p>
-              <input type="radio" id="yes" name="tidak_punya_listrik" value="1">
+              <input type="radio" id="yes" name="tidak_punya_listrik" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="tidak_punya_listrik" value="0">
               <label for="no">Tidak</label>
@@ -86,7 +86,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Air minum dari sumur / mata air tidak terlindungi / sungai / air hujan :</p>
-              <input type="radio" id="yes" name="air_minum_sumur" value="1">
+              <input type="radio" id="yes" name="air_minum_sumur" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="air_minum_sumur" value="0">
               <label for="no">Tidak</label>
@@ -95,7 +95,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Bahan bakar kayu bakar / arang / minyak tanah :</p>
-              <input type="radio" id="yes" name="kayu_bakar" value="1">
+              <input type="radio" id="yes" name="kayu_bakar" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="kayu_bakar" value="0">
               <label for="no">Tidak</label>
@@ -104,7 +104,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Konsumsi daging / susu / ayam hanya 1 kali seminggu :</p>
-              <input type="radio" id="yes" name="daging_satu_seminggu" value="1">
+              <input type="radio" id="yes" name="daging_satu_seminggu" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="daging_satu_seminggu" value="0">
               <label for="no">Tidak</label>
@@ -113,7 +113,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Satu stel pakaian setahun :</p>
-              <input type="radio" id="yes" name="satu_baju_setahun" value="1">
+              <input type="radio" id="yes" name="satu_baju_setahun" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="satu_baju_setahun" value="0">
               <label for="no">Tidak</label>
@@ -122,7 +122,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Makan 1-2 kali sehari :</p>
-              <input type="radio" id="yes" name="makan_satu_dua_sehari" value="1">
+              <input type="radio" id="yes" name="makan_satu_dua_sehari" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="makan_satu_dua_sehari" value="0">
               <label for="no">Tidak</label>
@@ -131,7 +131,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Tidak sanggup berobat ke puskesmas / poliklinik :</p>
-              <input type="radio" id="yes" name="tidak_sanggup_berobat" value="1">
+              <input type="radio" id="yes" name="tidak_sanggup_berobat" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="tidak_sanggup_berobat" value="0">
               <label for="no">Tidak</label>
@@ -140,7 +140,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Besaran penghasilan Kepala Keluarga Rp.600.000/bulan :</p>
-              <input type="radio" id="yes" name="penghasilan_dibawah_600" value="1">
+              <input type="radio" id="yes" name="penghasilan_dibawah_600" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="penghasilan_dibawah_600" value="0">
               <label for="no">Tidak</label>
@@ -149,7 +149,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Pendidikan Kepala Keluarga tidak sekolah / tidak tamat SD / tamat SD :</p>
-              <input type="radio" id="yes" name="kk_tidak_sekolah" value="1">
+              <input type="radio" id="yes" name="kk_tidak_sekolah" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="kk_tidak_sekolah" value="0">
               <label for="no">Tidak</label>
@@ -158,7 +158,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Tidak memiliki tabungan / barang mudah dijual minimal Rp.500.000 :</p>
-              <input type="radio" id="yes" name="tidak_punya_tabungan" value="1">
+              <input type="radio" id="yes" name="tidak_punya_tabungan" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="tidak_punya_tabungan" value="0">
               <label for="no">Tidak</label>
@@ -167,7 +167,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Apakah ada anggota keluarga yang lanjut usia :</p>
-              <input type="radio" id="yes" name="lansia" value="1">
+              <input type="radio" id="yes" name="lansia" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="lansia" value="0">
               <label for="no">Tidak</label>
@@ -176,7 +176,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Apakah ada anggota keluarga dengan kebutuhan khusus (disabilitas) :</p>
-              <input type="radio" id="yes" name="disabilitas" value="1">
+              <input type="radio" id="yes" name="disabilitas" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="disabilitas" value="0">
               <label for="no">Tidak</label>
@@ -185,7 +185,7 @@
         <div class="col-sm-6 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Apakah ada anak usia dini 0 s/d 6 tahun :</p>
-              <input type="radio" id="yes" name="usia_dini" value="1">
+              <input type="radio" id="yes" name="usia_dini" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="usia_dini" value="0">
               <label for="no">Tidak</label>
@@ -194,7 +194,7 @@
         <div class="col-sm-4 mb-2">
           <div class="input-box-underline">
             <p class="m-0 p-0">Apakah ada kondisi ibu hamil/nifas :</p>
-              <input type="radio" id="yes" name="ibu_hamil" value="1">
+              <input type="radio" id="yes" name="ibu_hamil" value="1" required>
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="ibu_hamil" value="0">
               <label for="no">Tidak</label>
@@ -205,7 +205,7 @@
         <div class="col-sm-4">
           <div class="input-box-underline">
             <p class="m-0 p-0">Apakah ada anak yang sedang bersekolah SD/sederajat :</p>
-            <input type="radio" id="yes" name="anak_sd" value="1">
+            <input type="radio" id="yes" name="anak_sd" value="1" required>
             <label for="yes" class="mr-1">Ya</label>
             <input type="radio" id="no" name="anak_sd" value="0">
             <label for="no">Tidak</label>
@@ -213,8 +213,8 @@
           </div>
           <div class="col-sm-4">
           <div class="input-box-underline">
-            <p class="m-0 p-0">Apakah ada anak yang sedang bersekolah SD/sederajat :</p>
-            <input type="radio" id="yes" name="anak_smp" value="1">
+            <p class="m-0 p-0">Apakah ada anak yang sedang bersekolah SMP/sederajat :</p>
+            <input type="radio" id="yes" name="anak_smp" value="1" required>
             <label for="yes" class="mr-1">Ya</label>
             <input type="radio" id="no" name="anak_smp" value="0">
             <label for="no">Tidak</label>
@@ -222,7 +222,7 @@
           </div>
           <div class="col-sm-4">
             <div class="input-box-underline">
-              <p class="m-0 p-0">Apakah ada anak yang sedang bersekolah SD/sederajat :</p>
+              <p class="m-0 p-0">Apakah ada anak yang sedang bersekolah SMA/sederajat :</p>
               <input type="radio" id="yes" name="anak_sma" value="1">
               <label for="yes" class="mr-1">Ya</label>
               <input type="radio" id="no" name="anak_sma" value="0">
