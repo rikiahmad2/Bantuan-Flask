@@ -79,6 +79,12 @@
             <p>
               Keluarga ini memenuhi kriteria dan dikatakan layak sebagai calon penerima Bantuan Program Keluarga Harapan
             </p>
+            <p>
+              Alasan :
+              {%for i in range(0, len)%}
+                <li>{{reason[i]}}</li><br>
+              {%endfor%}
+            </p>
           {% endif %}
         </div>
       </div>
