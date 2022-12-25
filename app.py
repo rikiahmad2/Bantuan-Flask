@@ -78,6 +78,8 @@ def arrayCheck(array):
     for idx, val in enumerate(array):
         if(array[idx] == '1'):
             data.append(questionSwitchCaseIndex(idx)+" : Ya")
+        if(array[idx] == '0'):
+            data.append(questionSwitchCaseIndex(idx)+" : Tidak")
 
     return data
 
