@@ -60,7 +60,7 @@ def form_post():
     predicted = modelload.predict([dataArray])
     finaldata = json.dumps(predicted.tolist())
     result = finaldata[1]
-    reason = treeCheck(dataArray)
+    reason = arrayCheck(dataArray)
     if(result == '2'):
         data = 'Tidak Berhak Mendapat Bantuan'
         icon = 'cancel.svg'
@@ -73,11 +73,60 @@ def form_post():
     title= 'Result'
     return render_template('result.html', title=title, data=data, icon=icon, reason=reason, len=len(reason))
 
+def arrayCheck(array):
+    data = []
+    for idx, val in enumerate(array):
+        if(array[idx] == '1'):
+            data.append(questionSwitchCaseIndex(idx)+" : Ya")
 
+    return data
 
-if __name__ == '__main__':
-    app.debug = True
-    app.run()
+def questionSwitchCaseIndex(questionIndex):
+    match questionIndex:
+        case 0:
+            return "Berapa Luas Lantai"
+        case 1:
+            return "Lantai Terbuat Dari tanah/ bambu/ kayu"
+        case 2:
+            return "Dinding terbuat dari bambu / rumbia / kayu / tembok tanpa plester"
+        case 3:
+            return "Buang air besar tanpa fasilitas / fasilitas bersama"
+        case 4:
+            return "Penerangan tanpa listrik"
+        case 5:
+            return "Air minum dari sumur / mata air tidak terlindungi / sungai / air hujan"
+        case 6:
+            return "Bahan bakar kayu bakar / arang / minyak tanah"
+        case 7:
+            return "Konsumsi daging / susu / ayam hanya 1 kali seminggu"
+        case 8:
+            return "Satu stel pakaian setahun"
+        case 9:
+            return "Makan 1-2 kali sehari"
+        case 10:
+            return "Tidak sanggup berobat ke puskesmas / poliklinik"
+        case 11:
+            return "Besaran penghasilan Kepala Keluarga Rp.600.000/bulan"
+        case 12:
+            return "Pendidikan Kepala Keluarga tidak sekolah / tidak tamat SD / tamat SD"
+        case 13:
+            return "Tidak memiliki tabungan / barang mudah dijual minimal Rp.500.000"
+        case 14:
+            return "Apakah ada anggota keluarga yang lanjut usia"
+        case 15:
+            return "Apakah ada anggota keluarga dengan kebutuhan khusus (disabilitas)"
+        case 16:
+            return "Apakah ada anak usia dini 0 s/d 6 tahun"
+        case 17:
+            return "Apakah ada kondisi ibu hamil/nifas"
+        case 18:
+            return "Apakah ada anak yang sedang bersekolah SD/sederajat"
+        case 19:
+            return "Apakah ada anak yang sedang bersekolah SMP/sederajat"
+        case 20:
+            return "Apakah ada anak yang sedang bersekolah SMA/sederajat"
+        case _:
+            return "Undefined Index"
 
 def treeCheck(array):
     data = []
@@ -237,4 +286,9 @@ def treeCheck(array):
                                     if(array[14] == '1'):
                                         data.append("Lansia : Ya")
                                         return data
+
+#Run Main Program
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
                         
