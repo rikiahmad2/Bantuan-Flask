@@ -31,9 +31,9 @@ def form_post():
     luas_lantai = form['luas_lantai']
     luas_lantai = int(luas_lantai)
     if(luas_lantai >= 60):
-        luas_lantai = 0
+        luas_lantai = '0'
     else :
-        luas_lantai = 1       
+        luas_lantai = '1'      
     dataArray = [
         luas_lantai,
         form['lantai_tanah'],
